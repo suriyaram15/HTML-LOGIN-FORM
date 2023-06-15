@@ -1,0 +1,105 @@
+<html>
+<head> 
+<title>Registration form</title> 
+</head> 
+<script>
+
+function form(){
+var a = document.getElementById("myname").value;
+var b = document.getElementById("uname").value;
+var c= document.getElementById("dob").value;
+var d = document.getElementById("ph").value;
+var e = document.getElementById("e").value;
+var f = document.getElementById("add").value;
+var g = document.getElementById("nat").value;
+var h = document.getElementById("mg").value;
+var i = document.getElementById("v1").value;
+var j = document.getElementById("ps").value;
+
+if(a=="" || a==null){
+      alert("Please Fill all the Text Boxes!");
+      return false;
+}
+if(b=="" || b==null){
+      alert("Please Fill all the Text Boxes!");
+      return false;
+}
+if(c=="" || c==null){
+      alert("Please Fill all the Text Boxes!");
+      return false;
+}
+if(d.length>10){
+      alert(" The phone number must be 10 digits only");
+      return false;
+}
+if(d.length<10){
+      alert(" The phone number must contains 10 digits");
+      return false;
+}
+if(e=="" || e==null ){
+      alert("Please Fill all the Text Boxes!");
+      return false;
+}
+if(f=="" || f==null){
+      alert("Please Fill all the Text Boxes!");
+      return false;
+}
+if(g=="" || g==null){
+      alert("Please Fill all the Text Boxes!");
+      return false;
+}
+if(h=="" || h==null){
+      alert("Please Fill all the Text Boxes!");
+      return false;
+}
+if(i=="" || i==null){
+      alert("Please Fill all the Text Boxes!");
+      return false;
+}
+if(j=="" || j==null){
+      aalert("Please Fill all the Text Boxes!");
+      return false;
+}
+else{
+      alert("Congratulations😃Successfully Login");
+      return true;
+      }
+}
+</script>
+<body style="background-color:plum;">
+<h1><center><u>REGISTRATION FORM</u></center></h1> 
+<form  name="myform" method="post" onsubmit="return form()">
+Name:<input type="text" id="myname" ><br><br>
+Father Name:<input type="text" id="uname" ><br><br>
+Date of Birth :<input type="date" id="dob"><br><br>
+Mobile No : <input type="number" id="ph" ><br><br>
+Email Id : <input type="email" id="e"><br><br>
+Address:<input type="text" id="add" ><br><br>
+Nationality:<select name = "dropdown" id="nat">
+        <option value="select">-(Please select a Country)-</option>
+        <option value="india"> India </option>
+        <option value = "Australia">Australia</option>
+        <option value = "America">America</option>
+        <option value="united Kingdom"> United Kingdom </option> 
+       <option value="denmark">Denmark</option> 
+       <option value="Hungary">Hungary</option> 
+       <option value="Netherlands">Netherlands</option> 
+       <option value="Canada">Canada</option> 
+       <option value="Finland">Finland</option> 
+       <option value="Germany">Germany</option> 
+       </select><br><br>
+Gender :<input type="radio" id="mg">Male
+      <input type="radio" id="mg">Female<br><br>
+Hobbies :<br><input type="checkbox" id="v1" value="Reading">
+  <label for="v1"> Reading Books</label><br>
+  <input type="checkbox" id="v2" name="uname" value="Driving">
+  <label for="v2"> Driving</label><br>
+  <input type="checkbox" id="v3" name="uname" value="Playing">
+  <label for="v3"> Playing Sports</label><br><br>
+Password : <input type="password" id="ps" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+  title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"><br><br>
+<input type="submit">
+
+</form>
+</body>
+</html>
